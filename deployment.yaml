@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: attendance-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: attendance
+  template:
+    metadata:
+      labels:
+        app: attendance
+    spec:
+      containers:
+        - name: attendance-container
+          image: student-attendance-system:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000

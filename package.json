@@ -16,5 +16,8 @@
   },
   "allowScripts": {
     "sqlite3@6.0.1": true
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.51.0"
   }
 }
