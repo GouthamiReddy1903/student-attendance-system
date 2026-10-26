@@ -1,0 +1,127 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5fb;
+  color: #202b3c;
+}
+
+header {
+  background: #183b70;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 0;
+}
+
+main {
+  width: 95%;
+  max-width: 1250px;
+  margin: 25px auto;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  margin-bottom: 24px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+h2 {
+  color: #183b70;
+  margin-top: 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+input, button {
+  padding: 11px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+input {
+  border: 1px solid #cbd3df;
+}
+
+form input {
+  flex: 1 1 180px;
+}
+
+button {
+  border: none;
+  background: #2463c5;
+  color: white;
+  cursor: pointer;
+  margin: 5px 3px 5px 0;
+}
+
+button:hover {
+  background: #16478f;
+}
+
+.actions {
+  margin: 12px 0;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #dce2ec;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background: #e5edfb;
+}
+
+td select {
+  padding: 7px;
+  border: 1px solid #cbd3df;
+  border-radius: 5px;
+}
+
+.message {
+  font-weight: bold;
+  margin-top: 12px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  color: #536176;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 14px;
+  }
+
+  header h1 {
+    font-size: 23px;
+  }
+}

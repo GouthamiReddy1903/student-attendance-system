@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Attendance Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Student Attendance Management System</h1>
+    <p>Manage daily attendance and monthly reports</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Add Student</h2>
+      <form id="studentForm">
+        <input id="rollNo" placeholder="Roll Number" required>
+        <input id="studentName" placeholder="Student Name" required>
+        <input id="department" placeholder="Department (e.g. CSE-AIML)" required>
+        <button type="submit">Add Student</button>
+      </form>
+      <p id="studentMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Daily Attendance</h2>
+      <label for="attendanceDate">Select Date:</label>
+      <input type="date" id="attendanceDate">
+      <div class="actions">
+        <button id="markAllPresent" type="button">Mark All Present</button>
+        <button id="markAllAbsent" type="button">Mark All Absent</button>
+        <button id="saveAttendance" type="button">Save Attendance</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Student Name</th>
+              <th>Department</th>
+              <th>Period 1</th>
+              <th>Period 2</th>
+              <th>Period 3</th>
+              <th>Period 4</th>
+              <th>Period 5</th>
+              <th>Period 6</th>
+              <th>Period 7</th>
+            </tr>
+          </thead>
+          <tbody id="attendanceBody"></tbody>
+        </table>
+      </div>
+      <p id="attendanceMessage" class="message" aria-live="polite"></p>
+    </section>
+
+    <section class="card">
+      <h2>Monthly Attendance Report</h2>
+      <label for="reportMonth">Select Month:</label>
+      <input type="month" id="reportMonth">
+      <button id="loadReport" type="button">Generate Report</button>
+      <button id="exportReport" type="button">Export CSV</button>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Working Periods</th>
+              <th>Attended</th>
+              <th>Absent</th>
+              <th>Attendance %</th>
+            </tr>
+          </thead>
+          <tbody id="reportBody"></tbody>
+        </table>
+      </div>
+      <p id="reportMessage" class="message" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Student Attendance Management System | DevOps Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
